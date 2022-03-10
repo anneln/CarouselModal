@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-weight: lighter;
+    color: #998822;
+    margin-bottom: 50px;
+    animation: 3s slidein;
+}
+@keyframes slidein {
+  from { 
+    margin-left: 0%;
+    width: 80%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+#overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    position: absolute;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#overlay-text {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#modal {
+    display: none;
+    max-width: 600px;
+    top: 10%;
+    position: relative;
+}
+
+#overlay button{
+    border: none;   
+    width: 50px;
+    height: 40px;
+    border-radius: 3px;
+    color: #fff;  
+}
+
+#overlay button#open-modal {
+    background-color: #38761d;   
+}
+
+#overlay button#close-modal {
+    background-color: #cc0000;  
+}
+
+.carousel {
+    max-width: 600px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;    
+}
+
+.carousel .carousel-item, .carousel .carousel-item-hidden{
+    display: none;
+}
+
+.carousel .carousel-item-visible {
+    display: block;
+}
+
+.carousel .carousel-item img{
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+.carousel .carousel-actions {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    top: 50%;  
+    transform: translateY(-50%);
+}
+
+.carousel .carousel-actions button{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.carousel .carousel -actions button#carousel-button-prev{
+    margin-left: 15px;   
+}
+
+.carousel .carousel-actions button#carousel-button-next{
+    margin-right: 15px;   
+}
+
+@keyframes fadeVisibility {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+.carousel-item-visible{
+    animation: fadeVisibility 0.5s;
+}
